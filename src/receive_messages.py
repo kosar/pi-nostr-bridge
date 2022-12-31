@@ -27,7 +27,7 @@ request = [ClientMessageType.REQUEST, subscription_id]
 request.extend(filters.to_json_array())
 
 relay_manager = RelayManager()
-relay_manager.add_relay("ws://192.168.87.68:8080")
+relay_manager.add_relay("") # add your relay endpoint here
 relay_manager.add_subscription(subscription_id, filters)
 relay_manager.open_connections({"cert_reqs": ssl.CERT_NONE}) # NOTE: This disables ssl certificate verification
 time.sleep(1.25) # allow the connections to open
